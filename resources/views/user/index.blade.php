@@ -24,6 +24,7 @@
                     <tr>
                         <th>Name</th>
                         <th>Role</th>
+                        <th>Register Date Time</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -32,6 +33,7 @@
                     <tr>
                         <td>{{$user->name}}</td>
                         <td>{{ucfirst($user->role)}}</td>
+                        <td>{{$user->created_at}}</td>
                         <td>
                             <a href="{{route('users.edit', $user->id)}}"><i class="fa fa-edit p-2"></i></a>
                             <a href="#" data-url="{{route('users.softdelete', $user->id)}}" data-toggle="model" class="btnDelete"><i class="fa fa-trash p-2"></i></a>
